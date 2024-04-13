@@ -1,0 +1,20 @@
+/* Estilos para telas maiores que 768px (tablets e desktops) */
+@media (min-width: 768px) {
+    .caixa {
+        width: 50%; /* Reduz a largura das caixas para 50% da largura da tela */
+        float: left; /* Alinha as caixas lado a lado */
+    }
+
+    #gerar {
+        clear: both; /* Limpa o float para evitar que o conteúdo abaixo das caixas seja afetado */
+    }
+}
+
+/* Estilos para telas menores que 768px (celulares) */
+@media (max-width: 768px) {
+    .caixa {
+        width: 100%; /* Define a largura das caixas como 100% da largura da tela */
+        float: none; /* Remove o alinhamento float */
+        margin-bottom: 10px; /* Adiciona uma margem inferior para separar as caixas */
+    }
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador</title>
+    <link rel="stylesheet" href="./Styles/font.css">
+    <link rel="stylesheet" href="./Styles/style.css">
+    <link rel="stylesheet" href="./Styles/mobile.css">
+    <link rel="shortcut icon" href="./Medias/Favicon.png" type="image/x-icon">
+</head>
+<body>
+    <h1>Gerador de mensagens</h1>
+
+    <div class="formulario">
+        <div class="campo">
+            <input id="nome" type="text" placeholder="Nome do cliente" maxlength="50" required>
+        </div>
+        <div class="campo">
+            <input id="placa" type="text" placeholder="Placa do Veiculo" maxlength="8" required>
+        </div>
+        <div class="campo">
+            <select id="seguradora" required>
+                <option value="">Selecione a seguradora</option>
+                <option value="ALLIANZ">ALLIANZ</option>
+                <option value="PORTO SEGURO">PORTO SEGURO</option>
+                <option value="AZUL">AZUL</option>
+                <option value="ITAU">ITAU</option>
+                <option value="BRADESCO">BRADESCO</option>
+                <option value="SUHAI">SUHAI</option>
+                <option value="LIBERTY">LIBERTY</option>
+                <option value="SOMPO">SOMPO</option>
+                <option value="HDI">HDI</option>
+                <option value="ZURICH">ZURICH</option>
+                <option value="TOKIO MARINE">TOKIO MARINE</option>
+                <option value="MAPFRE">MAPFRE</option>
+                <option value="ALFA">ALFA</option>
+            </select>
+        </div>
+        <div class="campo">
+            <select id="numeroParcela" required>
+                <option value="">Selecione o número da parcela</option>
+                <option value="1">Parcela 1</option>
+                <option value="2">Parcela 2</option>
+                <option value="3">Parcela 3</option>
+                <option value="4">Parcela 4</option>
+                <option value="5">Parcela 5</option>
+                <option value="6">Parcela 6</option>
+                <option value="7">Parcela 7</option>
+                <option value="8">Parcela 8</option>
+                <option value="9">Parcela 9</option>
+                <option value="10">Parcela 10</option>
+                <option value="11">Parcela 11</option>
+                <option value="12">Parcela 12</option>
+            </select>
+        </div>
+        <div class="campo">
+            <h1>Data de vencimento da parcela</h1>
+            <input id="data" type="date" placeholder="Data de vencimento da parcela" required>
+        </div>
+        <div class="campo">
+            <h1>Data de vencimento da parcela prorrogada</h1>
+            <input id="dataProrrogada" type="date" placeholder="Data de vencimento da parcela prorrogada" required>
+        </div>
+    </div>
+
+    <div id="gerar">
+        <button onclick="personalizarTexto()">Personalizar Texto</button>
+    </div>
+
+    <div class="textoPronto">
+        <h2>Seu texto</h2>
+        <p id="textoPersonalizado">"Prezado cliente, bom dia! Tudo bem?"
+            A seguradora seguradora nao identificou o pagamento da numeroparcelaª parcela que venceu na data data referente ao veiculo de placa placa.
+
+            Desta forma a CIA liberou um boleto com o prazo de pagamento para 01/04/2024. O não pagamento da parcela acarretará no cancelamento do seguro e o veículo ficará sem cobertura securitária.
+
+            Por gentileza enviar comprovante de pagamento quando o mesmo for efetuado.
+
+            Segue em anexo boleto prorrogado.
+        </p>
+    </div>
+
+    <footer>
+        <p>Desenvolvido por Matheus Trujillo de Oliveira</p>
+    </footer>
+
+    <script src="./Script/script.js"></script>
+</body>
+</html>

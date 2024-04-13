@@ -1,0 +1,91 @@
+/* Estilos básicos para o layout */
+body {
+    font-family: "Open Sans", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #F0F8FF;
+}
+
+h1 {
+    text-align: center;
+    color: black;
+}
+
+.formulario {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.campo {
+    margin-bottom: 20px;
+}
+
+.campo h1 {
+    padding: 10px;
+    font-size: 15px;
+}
+
+select,
+input[type="text"],
+input[type="date"] {
+    width: calc(100% - 16px); /* Ajuste para considerar a largura do padding e da borda */
+    padding: 8px;
+    border: 1px solid black;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+#gerar {
+    text-align: center;
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease-in;
+}
+
+button:hover {
+    color: #007bff;
+    background-color: #F0F8FF;
+    border: 1px solid #007bff;
+}
+
+.textoPronto {
+    max-width: 90%; /* Alterado para largura responsiva */
+    margin: 20px auto;
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+}
+
+.textoPronto h2 {
+    margin-top: 0;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+
+
+/* CSS responsivo */
+@media screen and (max-width: 600px) {
+    .formulario {
+        max-width: 90%; /* Alterado para largura responsiva */
+    }
+    .textoPronto {
+        max-width: 95%; /* Alterado para largura responsiva */
+    }
+}
