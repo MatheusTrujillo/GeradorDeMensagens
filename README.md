@@ -1,0 +1,5 @@
+Este projeto é uma iniciativa pessoal motivada pela necessidade de solucionar uma dor específica enfrentada no ambiente de trabalho. Ao lidar com a tarefa repetitiva e demorada de redigir manualmente mensagens de cobrança, percebi a oportunidade de criar uma solução que simplificasse e automatizasse esse processo.
+
+Desenvolvi um sistema web como uma simulação de projeto, com o objetivo de demonstrar como poderia tornar meu trabalho mais eficiente ao utilizar uma abordagem mais automatizada para redigir mensagens de cobrança. O sistema oferece um modelo de texto padronizado e personalizável, permitindo uma comunicação consistente e profissional com os clientes.
+
+Embora seja um projeto pessoal, criado para simular uma solução para uma dor específica, ele demonstra minha habilidade em identificar problemas e buscar soluções criativas e eficientes. Ao desenvolvê-lo, explorei diversas tecnologias e conceitos de design para criar uma solução que atendesse às minhas necessidades e expectativas.
