@@ -1,5 +1,4 @@
 function personalizarTexto() {
-    // Obter os valores dos campos
     var nomeCliente = document.getElementById('nome').value;
     var placa = document.getElementById('placa').value;
     var seguradora = document.getElementById('seguradora').value;
@@ -7,28 +6,23 @@ function personalizarTexto() {
     var data = document.getElementById('data').value;
     var dataProrrogada = document.getElementById('dataProrrogada').value;
 
-    // Variável de validação
     var camposPreenchidos = true;
 
-    // Verificar se os campos obrigatórios estão preenchidos
     if (nomeCliente === '' || placa === '' || seguradora === '' || numeroParcela === '' || data === '' || dataProrrogada === '') {
         alert('Por favor, preencha todos os campos obrigatórios.');
         camposPreenchidos = false;
     }
-    // Validar a placa (padrão normal e Mercosul)
+
     var placaRegex = /^[a-zA-Z]{3}\d{4}$|^[a-zA-Z]{3}\d[a-zA-Z]\d{2}$/;
     if (!placa.match(placaRegex)) {
         alert('Por favor, insira uma placa válida.');
         camposPreenchidos = false;
-    }   
+    }
 
-
-    // Se algum campo estiver vazio ou a placa for inválida, retorna sem gerar o texto
     if (!camposPreenchidos) {
         return;
     }
 
-    // Função para formatar a data no formato dd/mm/aaaa
     function formatarData(dataStr) {
         var dataObj = new Date(dataStr);
         var dia = ("0" + dataObj.getUTCDate()).slice(-2);
@@ -36,8 +30,6 @@ function personalizarTexto() {
         var ano = dataObj.getUTCFullYear();
         return dia + '/' + mes + '/' + ano;
     }
-
-
 
     var dataFormatada = formatarData(data);
     var dataFormatadaProrrogada = formatarData(dataProrrogada);
@@ -51,4 +43,32 @@ function personalizarTexto() {
     Segue em anexo boleto prorrogado.`;
 
     document.getElementById('textoPersonalizado').textContent = textoPersonalizado;
+}
+
+function copiarTexto() {
+    var texto = document.getElementById('textoPersonalizado').innerText;
+    var textoLimpo = texto.replace(/\r/g, ''); // Remove apenas retornos de carro
+
+    var inputTemporario = document.createElement('input');
+    inputTemporario.setAttribute('value', textoLimpo);
+    document.body.appendChild(inputTemporario);
+
+    inputTemporario.select();
+    inputTemporario.setSelectionRange(0, 99999); // Para dispositivos móveis
+
+    document.execCommand('copy');
+
+    document.body.removeChild(inputTemporario);
+
+    alert('Texto copiado com sucesso!');
+}
+
+function enviarEmail() {
+    var texto = document.getElementById('textoPersonalizado').textContent;
+    var assunto = encodeURIComponent("Assunto do Email");
+    var corpoEmail = encodeURIComponent(texto);
+
+    var linkEmail = "mailto:?subject=" + assunto + "&body=" + corpoEmail;
+
+    window.open(linkEmail, "_blank");
 }
