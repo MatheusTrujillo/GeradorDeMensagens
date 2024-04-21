@@ -28,7 +28,7 @@ h1 {
 select,
 input[type="text"],
 input[type="date"] {
-    width: calc(100% - 16px); /* Ajuste para considerar a largura do padding e da borda */
+    width: calc(100% - 1px); /* Ajuste para considerar a largura do padding e da borda */
     padding: 8px;
     border: 1px solid black;
     border-radius: 5px;
@@ -57,11 +57,30 @@ button:hover {
 }
 
 .textoPronto {
-    max-width: 90%; /* Alterado para largura responsiva */
+    position: relative;
+    max-width: 90%;
     margin: 20px auto;
     padding: 20px;
     border: 2px solid #ccc;
     border-radius: 4px;
+    overflow: hidden; /* Para evitar que o botão ultrapasse a borda do contêiner */
+}
+
+#btnCopiar {
+    position: absolute;
+    top: 10px; /* Distância do topo */
+    right: 10px; /* Distância da direita */
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease-in;
+}
+
+#btnCopiar:hover {
+    background-color: #0056b3;
 }
 
 .textoPronto h2 {
@@ -69,16 +88,14 @@ button:hover {
 }
 
 footer {
-    background-color: #333;
-    color: #fff;
+    background-color: #c2d5ff;
+    color: black;
     text-align: center;
-    padding: 20px 0;
+    padding: 10px 0;
     position: fixed;
     bottom: 0;
     width: 100%;
 }
-
-
 
 /* CSS responsivo */
 @media screen and (max-width: 600px) {

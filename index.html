@@ -17,7 +17,7 @@
             <input id="nome" type="text" placeholder="Nome do cliente" maxlength="50" required>
         </div>
         <div class="campo">
-            <input id="placa" type="text" placeholder="Placa do Veiculo" maxlength="8" required>
+            <input id="placa" type="text" placeholder="Placa do Veiculo" maxlength="7" required>
         </div>
         <div class="campo">
             <select id="seguradora" required>
@@ -69,6 +69,7 @@
     </div>
 
     <div class="textoPronto">
+        <button id="btnCopiar" onclick="copiarTexto()">Copiar Texto </button>
         <h2>Seu texto</h2>
         <p id="textoPersonalizado">"Prezado cliente, bom dia! Tudo bem?"
             A seguradora seguradora nao identificou o pagamento da numeroparcelaª parcela que venceu na data data referente ao veiculo de placa placa.
@@ -79,6 +80,9 @@
 
             Segue em anexo boleto prorrogado.
         </p>
+
+        <a id="btnEnviarEmail" href="#" onclick="enviarEmail()">Enviar Email</a> 
+        
     </div>
 
     <footer>
