@@ -34,13 +34,11 @@ function personalizarTexto() {
     var dataFormatada = formatarData(data);
     var dataFormatadaProrrogada = formatarData(dataProrrogada);
 
-    var textoPersonalizado = `Prezado ${nomeCliente}, bom dia! Tudo bem? A seguradora ${seguradora} não identificou o pagamento da ${numeroParcela}ª parcela que venceu na data ${dataFormatada} referente ao veículo de placa ${placa}.
-    
-    Desta forma a CIA liberou um boleto com o prazo de pagamento para ${dataFormatadaProrrogada} O não pagamento da parcela acarretará no cancelamento do seguro e o veículo ficará sem cobertura securitária.
-
-    Por gentileza enviar comprovante de pagamento quando o mesmo for efetuado.
-
-    Segue em anexo boleto prorrogado.`;
+    var textoPersonalizado = "Prezado " + nomeCliente + ", bom dia! Tudo bem?\n\n" +
+    "A seguradora " + seguradora + " não identificou o pagamento da " + numeroParcela + "ª parcela que venceu na data " + dataFormatada + " referente ao veículo de placa " + placa + ".\n\n" +
+    "Desta forma a CIA liberou um boleto com o prazo de pagamento para " + dataFormatadaProrrogada + ". O não pagamento da parcela acarretará no cancelamento do seguro e o veículo ficará sem cobertura securitária.\n\n" +
+    "Por gentileza enviar comprovante de pagamento quando o mesmo for efetuado.\n\n" +
+    "Segue em anexo boleto prorrogado.";
 
     document.getElementById('textoPersonalizado').textContent = textoPersonalizado;
 }
@@ -65,7 +63,7 @@ function copiarTexto() {
 
 function enviarEmail() {
     var texto = document.getElementById('textoPersonalizado').textContent;
-    var assunto = encodeURIComponent("Assunto do Email");
+    var assunto = encodeURIComponent("Parcela em Atraso - Segurado: ");
     var corpoEmail = encodeURIComponent(texto);
 
     var linkEmail = "mailto:?subject=" + assunto + "&body=" + corpoEmail;
