@@ -62,7 +62,12 @@
             <h1>Data de vencimento da parcela prorrogada</h1>
             <input id="dataProrrogada" type="date" placeholder="Data de vencimento da parcela prorrogada" required>
         </div>
+        <div class="campo">
+            <h1>Número de Telefone (WhatsApp)</h1>
+            <input id="telefone" type="tel" placeholder="Insira o número de telefone">
+        </div>
     </div>
+
 
     <div id="gerar">
         <button onclick="personalizarTexto()">Personalizar Texto</button>
@@ -71,8 +76,11 @@
     <div class="textoPronto">
         <button id="btnCopiar" onclick="copiarTexto()">Copiar Texto </button>
         <button id="btnEnviarEmail"><a  href="#" onclick="enviarEmail()">Enviar Email</a></button>
+        <button id="btnEnviarWhatsapp" onclick="enviarWhatsapp()">Enviar WhatsApp</button>
+
         <h2>Seu texto</h2>
-        <p id="textoPersonalizado">"Prezado cliente, bom dia! Tudo bem?"
+        <p id="textoPersonalizado">Prezado cliente, bom dia! Tudo bem?
+
             A seguradora seguradora nao identificou o pagamento da numeroparcelaª parcela que venceu na data data referente ao veiculo de placa placa. 
 
             Desta forma a CIA liberou um boleto com o prazo de pagamento para 01/04/2024. O não pagamento da parcela acarretará no cancelamento do seguro e o veículo ficará sem cobertura securitária. 

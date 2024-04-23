@@ -5,6 +5,7 @@ function personalizarTexto() {
     var numeroParcela = document.getElementById('numeroParcela').value;
     var data = document.getElementById('data').value;
     var dataProrrogada = document.getElementById('dataProrrogada').value;
+    var telefone = document.getElementById('telefone').value;
 
     var camposPreenchidos = true;
 
@@ -22,6 +23,9 @@ function personalizarTexto() {
     if (!camposPreenchidos) {
         return;
     }
+
+    // Habilita o botão de envio de WhatsApp
+    document.getElementById('btnEnviarWhatsapp').disabled = false;
 
     function formatarData(dataStr) {
         var dataObj = new Date(dataStr);
@@ -70,3 +74,22 @@ function enviarEmail() {
 
     window.open(linkEmail, "_blank");
 }
+
+function enviarWhatsapp() {
+    var texto = document.getElementById('textoPersonalizado').textContent;
+    var telefone = document.getElementById('telefone').value;
+
+    // Verifica se há um número de telefone válido
+    if (telefone.trim() === '') {
+        alert('Por favor, insira um número de telefone válido.');
+        return;
+    }
+
+    // Formata o texto para a URL do WhatsApp
+    var textoFormatado = encodeURIComponent(texto);
+    var linkWhatsapp = 'https://api.whatsapp.com/send?phone=' + telefone + '&text=' + textoFormatado;
+
+    // Abre a URL do WhatsApp em uma nova aba
+    window.open(linkWhatsapp, '_blank');
+}
+
