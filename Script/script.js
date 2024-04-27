@@ -1,6 +1,6 @@
 function personalizarTexto() {
     var nomeCliente = document.getElementById('nome').value;
-    var placa = document.getElementById('placa').value;
+    var placa = document.getElementById('placa').value.toUpperCase();
     var seguradora = document.getElementById('seguradora').value;
     var numeroParcela = document.getElementById('numeroParcela').value;
     var data = document.getElementById('data').value;
@@ -41,10 +41,13 @@ function personalizarTexto() {
     var textoPersonalizado = "Prezado " + nomeCliente + ", bom dia! Tudo bem?\n\n" +
     "A seguradora " + seguradora + " não identificou o pagamento da " + numeroParcela + "ª parcela que venceu na data " + dataFormatada + " referente ao veículo de placa " + placa + ".\n\n" +
     "Desta forma a CIA liberou um boleto com o prazo de pagamento para " + dataFormatadaProrrogada + ". O não pagamento da parcela acarretará no cancelamento do seguro e o veículo ficará sem cobertura securitária.\n\n" +
-    "Por gentileza enviar comprovante de pagamento quando o mesmo for efetuado.\n\n" +
-    "Segue em anexo boleto prorrogado.";
+    "Caso a parcela já tenha sido paga, pedimos a gentileza que desconsidere este email e encaminhe o comprovante de pagamento.\n\n" +
+    "Segue em anexo boleto prorrogado.\n\n"+
+
+    "Atenciosamente."
 
     document.getElementById('textoPersonalizado').textContent = textoPersonalizado;
+
 }
 
 function copiarTexto() {
@@ -66,8 +69,9 @@ function copiarTexto() {
 }
 
 function enviarEmail() {
+    var nomeCliente = document.getElementById('nome').value;
     var texto = document.getElementById('textoPersonalizado').textContent;
-    var assunto = encodeURIComponent("Parcela em Atraso - Segurado: ");
+    var assunto = encodeURIComponent("Parcela em Atraso - Segurado: "+ nomeCliente);
     var corpoEmail = encodeURIComponent(texto);
 
     var linkEmail = "mailto:?subject=" + assunto + "&body=" + corpoEmail;
@@ -92,4 +96,3 @@ function enviarWhatsapp() {
     // Abre a URL do WhatsApp em uma nova aba
     window.open(linkWhatsapp, '_blank');
 }
-

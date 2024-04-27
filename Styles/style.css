@@ -1,9 +1,11 @@
 /* Estilos básicos para o layout */
 body {
     font-family: "Open Sans", sans-serif;
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
     background-color: #F0F8FF;
+    min-width: 1200px;
+    overflow: hidden;
 }
 
 h1 {
@@ -67,57 +69,18 @@ button:hover {
     overflow: hidden; /* Para evitar que o botão ultrapasse a borda do contêiner */
 }
 
-#btnCopiar {
-    position: absolute;
-    top: 10px; /* Distância do topo */
-    right: 10px; /* Distância da direita */
-    padding: 8px 16px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: all 0.3s ease-in;
+header{ 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
 }
 
-#btnCopiar:hover {
-    background-color: #0056b3;
+li{
+    display: inline-block;
+    margin: 10px;
 }
 
-#btnEnviarEmail {
-    position: absolute;
-    top: 10px; /* Distância do topo */
-    right: 15vh; /* Distância da direita */
-    padding: 8px 16px;
-    background-color: #fff;
-    color: #ffffff;
-    border: 2px solid black;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: all 0.3s ease-in;
-}
-
-
-#btnEnviarEmail {
-    background-color: #ffffff;
-}
-
-#btnEnviarWhatsapp {
-    position: absolute;
-    top: 10px; /* Distância do topo */
-    right: 29vh; /* Distância da direita */
-    padding: 8px 16px;
-    background-color: #dcf8c6;;
-    color: black;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: all 0.3s ease-in;
-}
-
-#btnEnviarWhatsapp:hover {
-    background-color: #ece5dd;
-}
 
 .textoPronto h2 {
     margin-top: 0;
