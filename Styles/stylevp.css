@@ -27,7 +27,6 @@ h1 {
 
 select,
 input[type="text"],
-input[type="date"],
 input[type="tel"] {
     width: calc(100% - 1px); /* Ajuste para considerar a largura do padding e da borda */
     padding: 8px;

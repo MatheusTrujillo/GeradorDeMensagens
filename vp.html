@@ -5,14 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gerador</title>
     <link rel="stylesheet" href="./Styles/font.css">
-    <link rel="stylesheet" href="./Styles/style.css">
+    <link rel="stylesheet" href="./Styles/stylevp.css">
     <link rel="stylesheet" href="./Styles/mobile.css">
     <link rel="shortcut icon" href="./Medias/Favicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="/Styles/sidebar.css">
-
+    <link rel="stylesheet" href="./Styles/sidebar.css">
 </head>
 <body>
-
     <div class="sidebar" id="sidebar">
         <a href="#" class="closebtn" onclick="closeNav()">&times;</a>
         <a href="/index.html">Parcelas</a>
@@ -22,7 +20,7 @@
     <div class="content">
         <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;Abrir menu</span>
     </div>
-    
+
     <h1>Gerador de mensagens</h1>
 
     <div class="formulario">
@@ -48,44 +46,15 @@
                 <option value="TOKIO MARINE">TOKIO MARINE</option>
                 <option value="MAPFRE">MAPFRE</option>
                 <option value="ALFA">ALFA</option>
-                <option value="ALFA">AIG</option>
-                <option value="ALFA">AKAD</option>
-                <option value="ALFA">AXA</option>
-                <option value="ALFA">BERKLEY</option>
-                <option value="ALFA">BMG</option>
-                <option value="ALFA">CHUBB</option>
-                <option value="ALFA">EXCELSIOR</option>
-                <option value="ALFA">FATOR</option>
-                <option value="ALFA">JUNTO</option>
-                <option value="ALFA">POTTENCIAL</option>
-                <option value="ALFA">SOMBRERO</option>
-                <option value="ALFA">SOMPO CORPORATE</option>
+                <option value="ALFA">DELTA</option>
             </select>
         </div>
         <div class="campo">
-            <select id="numeroParcela" required>
-                <option value="">Selecione o número da parcela</option>
-                <option value="1">Parcela 1</option>
-                <option value="2">Parcela 2</option>
-                <option value="3">Parcela 3</option>
-                <option value="4">Parcela 4</option>
-                <option value="5">Parcela 5</option>
-                <option value="6">Parcela 6</option>
-                <option value="7">Parcela 7</option>
-                <option value="8">Parcela 8</option>
-                <option value="9">Parcela 9</option>
-                <option value="10">Parcela 10</option>
-                <option value="11">Parcela 11</option>
-                <option value="12">Parcela 12</option>
+            <select id="instalacaoTipo" required>
+                <option value="">Selecione o tipo de agendamento</option>
+                <option value="a realização de vistoria">Vistoria</option>
+                <option value="a instalação de rastreador">Rastreador</option>
             </select>
-        </div>
-        <div class="campo">
-            <h1>Data de vencimento da parcela</h1>
-            <input id="data" type="date" placeholder="Data de vencimento da parcela" required>
-        </div>
-        <div class="campo">
-            <h1>Data de vencimento da parcela prorrogada</h1>
-            <input id="dataProrrogada" type="date" placeholder="Data de vencimento da parcela prorrogada" required>
         </div>
         <div class="campo">
             <h1>Número de Telefone (WhatsApp)</h1>
@@ -117,24 +86,30 @@
         
         <p id="textoPersonalizado">Prezado cliente, bom dia! Tudo bem?
 
-            A seguradora seguradora não identificou o pagamento da numeroparcelaª parcela que venceu na data data referente ao veículo de placa placa. 
+            A seguradora seguradora solicitou tipodeatendimento referente ao seu veículo de placa placa. 
 
-            Desta forma a CIA liberou um boleto com o prazo de pagamento para 01/04/2024. O não pagamento da parcela acarretará no cancelamento do seguro e o veículo ficará sem cobertura securitária. 
+            Desta forma estou entrando em contato para verificar referente ao agendamento e precisarei de algumas informações:
 
-            Caso a parcela já tenha sido paga, pedimos a gentileza que desconsidere este email e encaminhe o comprovante de pagamento.
+            - Tipo de atendimento:
+            A domicilio ou em comparecer em Posto-fixo.
 
-            Segue em anexo boleto prorrogado.
+            - Data de preferência.
+
+            - Período de preferência:
+            Manhã (08:00 - 13:00) ou Tarde (13:00 - 18:00)
+
+            - Endereço completo
+
+            Após estas informações verificaremos junto à prestadora para realizar o agendamento e retornamos.
 
             Atenciosamente.
-        </p>
-
     </div>
 
     <footer>
         <a href="https://github.com/MatheusTrujillo" target="_blank">Desenvolvido Por Matheus Trujillo</a>
     </footer>
 
-    <script src="./Script/script.js"></script>
-    <script src="./Script/navbar.js"></script>
+    <script src="./script/scriptvp.js"></script>
+    <script src="./script/navbar.js"></script>
 </body>
 </html>
