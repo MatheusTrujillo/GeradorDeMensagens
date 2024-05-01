@@ -5,15 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gerador</title>
     <link rel="stylesheet" href="./Styles/font.css">
-    <link rel="stylesheet" href="./Styles/stylevp.css">
+    <link rel="stylesheet" href="./Styles/style.css">
     <link rel="stylesheet" href="./Styles/mobile.css">
     <link rel="shortcut icon" href="./Medias/Favicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="./Styles/sidebar.css">
+    <link rel="stylesheet" href="/Styles/sidebar.css">
+
 </head>
 <body>
+
     <div class="sidebar" id="sidebar">
         <a href="#" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="./index.html">Parcelas</a>
+        <a href="./index.html">Demais Parcelas</a>
         <a href="vp.html">Vistoria e Rastreador</a>
         <a href="./lembrete.html">Lembrete de Parcela</a>
     </div>
@@ -21,7 +23,7 @@
     <div class="content">
         <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;Abrir menu</span>
     </div>
-
+    
     <h1>Gerador de mensagens</h1>
 
     <div class="formulario">
@@ -47,16 +49,34 @@
                 <option value="TOKIO MARINE">TOKIO MARINE</option>
                 <option value="MAPFRE">MAPFRE</option>
                 <option value="ALFA">ALFA</option>
-                <option value="ALFA">DELTA</option>
+                <option value="ALFA">AIG</option>
+                <option value="ALFA">AKAD</option>
+                <option value="ALFA">AXA</option>
+                <option value="ALFA">BERKLEY</option>
+                <option value="ALFA">BMG</option>
+                <option value="ALFA">CHUBB</option>
+                <option value="ALFA">EXCELSIOR</option>
+                <option value="ALFA">FATOR</option>
+                <option value="ALFA">JUNTO</option>
+                <option value="ALFA">POTTENCIAL</option>
+                <option value="ALFA">SOMBRERO</option>
+                <option value="ALFA">SOMPO CORPORATE</option>
             </select>
         </div>
+        
         <div class="campo">
-            <select id="instalacaoTipo" required>
-                <option value="">Selecione o tipo de agendamento</option>
-                <option value="a realização de vistoria">Vistoria</option>
-                <option value="a instalação de rastreador">Rastreador</option>
+            <select id="pgto">
+                <option value="">Forma de pagamento</option>
+                <option value="Débito em conta">Débito em conta</option>
+                <option value="Boleto">Boleto</option>
             </select>
         </div>
+
+        <div class="campo">
+            <h1>Data de vencimento da parcela</h1>
+            <input id="data" type="date" placeholder="Data de vencimento da parcela" required>
+        </div>
+
         <div class="campo">
             <h1>Número de Telefone (WhatsApp)</h1>
             <input id="telefone" type="tel" placeholder="Insira o número de telefone">
@@ -87,30 +107,22 @@
         
         <p id="textoPersonalizado">Prezado cliente, bom dia! Tudo bem?
 
-            A seguradora seguradora solicitou tipodeatendimento referente ao seu veículo de placa placa. 
+            Lembrando que a 1º parcela do seu seguro seguradora referente ao veículo de placa placa vencerá na data de 30/04/2024 via débito em conta.
+          
+            O não pagamento da parcela resultará no cancelamento do seguro.
 
-            Desta forma estou entrando em contato para verificar referente ao agendamento e precisarei de algumas informações:
-
-            - Tipo de atendimento:
-            A domicilio ou em comparecer em Posto-fixo.
-
-            - Data de preferência.
-
-            - Período de preferência:
-            Manhã (08:00 - 13:00) ou Tarde (13:00 - 18:00)
-
-            - Endereço completo
-
-            Após estas informações verificaremos junto à prestadora para realizar o agendamento e retornamos.
+            Qualquer duvida, estamos à sua disposição. 
 
             Atenciosamente.
+        </p>
+
     </div>
 
     <footer>
         <a href="https://github.com/MatheusTrujillo" target="_blank">Desenvolvido Por Matheus Trujillo</a>
     </footer>
 
-    <script src="./Script/scriptvp.js"></script>
+    <script src="./Script/scriptlembrete.js"></script>
     <script src="./Script/navbar.js"></script>
 </body>
 </html>
