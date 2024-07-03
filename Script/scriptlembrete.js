@@ -72,7 +72,7 @@ function copiarTexto() {
 function enviarEmail() {
     var nomeCliente = document.getElementById('nome').value;
     var texto = document.getElementById('textoPersonalizado').textContent;
-    var assunto = encodeURIComponent("Parcela em Atraso - Segurado: "+ nomeCliente);
+    var assunto = encodeURIComponent("Lembrete de parcela - Segurado: "+ nomeCliente);
     var corpoEmail = encodeURIComponent(texto);
 
     var linkEmail = "mailto:?subject=" + assunto + "&body=" + corpoEmail;
